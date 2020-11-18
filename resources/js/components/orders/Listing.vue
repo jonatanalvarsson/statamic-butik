@@ -80,6 +80,12 @@
                 rows: this.initialRows,
                 requestUrl: cp_url('/butik/api/orders/get'),
             }
+        },
+
+        methods: {
+            submissionUrl(submission) {
+                return cp_url('#');
+            }
         }
     }
 </script>

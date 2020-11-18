@@ -18,6 +18,7 @@ class OrderBlueprint extends Blueprint
                                 'type'     => 'text',
                                 'width'    => '66',
                                 'display'  => __('butik::cp.name'),
+                                'listable' => true,
                                 'validate' => 'required',
                             ],
                         ],

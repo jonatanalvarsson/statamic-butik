@@ -1634,6 +1634,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             rows: this.initialRows,
             requestUrl: cp_url('/butik/api/orders/get')
         };
+    },
+
+
+    methods: {
+        submissionUrl: function submissionUrl(submission) {
+            return cp_url('#');
+        }
     }
 });
 

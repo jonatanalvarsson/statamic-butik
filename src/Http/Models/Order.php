@@ -2,6 +2,9 @@
 
 namespace Jonassiewertsen\StatamicButik\Http\Models;
 
+use Jonassiewertsen\StatamicButik\Blueprints\OrderBlueprint;
+use Statamic\Fields\Blueprint;
+
 class Order extends ButikModel
 {
     protected $table        = 'butik_orders';
@@ -70,5 +73,10 @@ class Order extends ButikModel
     public function setItemsAttribute($value)
     {
         $this->attributes['items'] = json_encode($value);
+    }
+
+    public function blueprint(): Blueprint
+    {
+        return call_user_func(new OrderBlueprint());
     }
 }
